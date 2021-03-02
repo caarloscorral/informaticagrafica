@@ -1,15 +1,15 @@
 #include "colors.inc"
 
 #include "cuenco.inc"
-#include "ambientador1.inc"
+#include "ambientador.inc"
 #include "portavelas.inc"
 #include "esfera.inc"
 
 camera {
     //location <4,13,-20>
     //look_at <0,5,0>
-    location <5,13,-20>
-    look_at <0,5,1>
+    location <5,12,-16>
+    look_at <-2,5,1>
 }
 
 light_source {
@@ -39,13 +39,6 @@ object {
     scale <0.7, 0.7, 0.7>
 }
 
-// object {
-//     ambientador
-
-//     translate <-4, 0, 1>
-//     rotate <0, -0.5, 0>
-//     scale 1.1
-// }
 
 object {
     ambientador
