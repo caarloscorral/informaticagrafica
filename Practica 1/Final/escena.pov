@@ -8,14 +8,13 @@
 camera {
     //location <4,13,-20>
     //look_at <0,5,0>
-    location <5,12,-16>
+    location <5,14,-16>
     look_at <-2,5,1>
 }
 
 light_source {
-    <10, 10, -25>
-    //<0, 10, 30>
-
+    //<10, 10, -25>
+    <-5, 50, 30>
     color White
 }
 

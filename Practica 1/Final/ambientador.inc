@@ -70,7 +70,7 @@ union {
         // Palillo izquierda
         cylinder {
             <0.35, 0, 0.7>, 
-            <0.35, 2.5, 0.7>, 
+            <0.35, 2.35, 0.7>, 
             0.02
             translate <-0.35, 0, -0.7> 
             rotate <-18, 0, -4> 
@@ -79,7 +79,7 @@ union {
         //  Palillo central //
         cylinder {
             <0.5, 0, 0.65>,  
-            <0.5, 2.5, 0.65>, 
+            <0.5, 2.35, 0.65>, 
             0.02
             translate <-0.5, 0, -0.65> 
             rotate <-8, 0, 13> 
@@ -88,7 +88,7 @@ union {
         // Palillo derecha //
         cylinder {
             <0.45, 0, 0.4>, 
-            <0.45, 2.5, 0.4>, 
+            <0.45, 2.35, 0.4>, 
             0.02
             translate <-0.45, 0, -0.4> 
             rotate <11, 0, 12>

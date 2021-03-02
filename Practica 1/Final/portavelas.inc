@@ -108,8 +108,8 @@
     }
 
     texture {
-        Glass3
-
+        Glass3Mod
+      
         // finish {
         //   phong 0
         // }
