@@ -30,7 +30,10 @@
                 centro_esfera
                 radio_esferas
                 texture {
-                    Orange_Glass
+                    pigment { 
+                        color Orange
+                        transmit 0.5
+                    }
                 }
             }
             #declare num_esferas = num_esferas - 1;

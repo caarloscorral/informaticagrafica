@@ -1,28 +1,17 @@
-#include "colors.inc"
+#include "stones1.inc"
 
 #declare cuenco = 
-    union {
-        // Base
+    difference {
         sor {
-            4,
-            <0,0>, <2.1,0>, <2,1.8>, <0,1.8> 
-                
+            5,
+            <0, 0>, <0.6, 0>, <0.65, 0.4>, <1.1, 1.2>, <0, 1.2>
             texture {
-                pigment {
-                    color White
-                }
+                T_Stone8
             }
         }
-
-        // Parte de arriba    
-        sor {
-            4,
-            <0,0.5>, <1,0.5>, <4,3.5>, <0,3.5> 
-            open
-            texture {
-                pigment {
-                    color White
-                }
-            }
+        cylinder {
+            <0, 1, 0>, <0, 1.2, 0>, 1.5 // center of one end, center of other end, radius
+            open // remove end caps
+            
         }
     }
