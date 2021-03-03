@@ -12,56 +12,64 @@ camera {
     //location <4,13,-20>
     //look_at <0,5,0>
     //location <5, 5,-16>
-    location <2, 1, 2>
-    look_at <0, 0, 0>
+    location <5, 3, 1.6>
+    look_at <0, 1, 0.5>
+    right (x * image_width) / image_height
 }
 
 light_source {
     //<10, 10, -25>
-    <-5, 50, 30>
+    <20, 20, 0>
     color White
 }
+   
+// Plano vertical
+plane {
+    <1, 0, 0.35>, -5
 
-// plane {
-//     <-0.1,1.2,0.18>, 0.5
+    texture {
+        pigment {
+            color Black
+        }
+    }                                                                          
+}
 
-//     texture {
-//         pigment {
-//             color White
-//         }
-//     }
+// Plano horizontal
+plane {
+    y, 0
 
-//     //rotate <0, 0, 2>
-//     //translate <0, -999999.9, 0>                                                                                 
-// }
+    texture {
+        pigment {
+            color White
+        }
+    }                                                                          
+}
 
 object {
     cuenco
 
-    //translate <4, 2.5, -6>
-    //scale <0.7, 0.7, 0.7>
+    scale 0.48
+    translate <1.25, 0, 1.16>
 }
 
 
-// object {
-//     ambientador
+object {
+    ambientador
 
-//     scale 6
-//     rotate <0, -94, 3.1>
-//     translate <1, -0.7, 4>
-// }
+    translate <0, 0, 0>
+}
 
-// object {
-//     portavelas
+object {
+    portavelas
 
-//     translate <-6, -0.64, 8>
-//     scale <1.75, 3, 1.75>
-//     rotate <0, -8, 0>
-// }
+    scale <0.22, 0.45, 0.22>
+    rotate <0, 20, 0>
+    translate <-0.5, 0, -0.8>
+}
 
-// object {
-//     esfera
+object {
+    esfera
 
-//     scale 2.3
-//     translate <-4.5, 3.35, -5> // <x, y, z>
-// }                         
+    scale 0.5
+    translate <1.25, 0.5, -0.45>
+}                         
