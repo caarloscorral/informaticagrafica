@@ -9,27 +9,37 @@
 ejes(10)
 
 camera {
-    //location <4,13,-20>
+    //location <4, 13,-20>
     //look_at <0,5,0>
     //location <5, 5,-16>
     location <5, 3, 1.6>
-    look_at <0, 1, 0.5>
+    look_at <-0.5, 0, 0.5>
     right (x * image_width) / image_height
 }
 
 light_source {
     //<10, 10, -25>
-    <20, 20, 0>
+    <-6.2, 9, -1>
     color White
 }
    
 // Plano vertical
+// plane {
+//     <1, 0.5, 0.3>, -2.3
+
+//     texture {
+//         pigment {
+//             color DarkGreen
+//         }
+//     }                                                                          
+// }
+
 plane {
-    <1, 0, 0.35>, -5
+    <3, 1, 1.2>, -3.2
 
     texture {
         pigment {
-            color Black
+            color DarkGreen
         }
     }                                                                          
 }
@@ -48,8 +58,8 @@ plane {
 object {
     cuenco
 
-    scale 0.48
-    translate <1.25, 0, 1.16>
+    scale 0.45
+    translate <1.44, 0, 1.28>
 }
 
 
@@ -71,5 +81,5 @@ object {
     esfera
 
     scale 0.5
-    translate <1.25, 0.5, -0.45>
+    translate <1.35, 0.5, -0.45>
 }                         
