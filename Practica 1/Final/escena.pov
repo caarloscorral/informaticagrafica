@@ -1,47 +1,34 @@
+// **** Includes **** //
 #include "colors.inc"
-
 #include "cuenco.inc"
 #include "ambientador.inc"
 #include "portavelas.inc"
 #include "esfera.inc"
 
-#include "ejes.inc"
-ejes(10)
-
+// Camara
 camera {
-    //location <4, 13,-20>
-    //look_at <0,5,0>
-    //location <5, 5,-16>
-    location <5, 3, 1.6>
-    look_at <-0.5, 0, 0.5>
+    location <3.5, 2.1, 1.12>
+    look_at <-0.5, 0, 0>
     right (x * image_width) / image_height
 }
 
+// Luz
 light_source {
-    //<10, 10, -25>
     <-6.2, 9, -1>
     color White
 }
-   
+
+// **** Planos **** //
 // Plano vertical
-// plane {
-//     <1, 0.5, 0.3>, -2.3
-
-//     texture {
-//         pigment {
-//             color DarkGreen
-//         }
-//     }                                                                          
-// }
-
-plane {
-    <3, 1, 1.2>, -3.2
-
+box {
+    <-3.5, 0, -20>,
+    <-3.5, 4.5, 20>
     texture {
         pigment {
             color DarkGreen
         }
-    }                                                                          
+    }
+    rotate <0, -22, 0>
 }
 
 // Plano horizontal
@@ -55,6 +42,8 @@ plane {
     }                                                                          
 }
 
+// **** Objetos **** //
+// Cuenco
 object {
     cuenco
 
@@ -62,13 +51,14 @@ object {
     translate <1.44, 0, 1.28>
 }
 
-
+// Ambientador
 object {
     ambientador
 
     translate <0, 0, 0>
 }
 
+// Portavelas
 object {
     portavelas
 
@@ -77,6 +67,7 @@ object {
     translate <-0.5, 0, -0.8>
 }
 
+// Esfera
 object {
     esfera
 

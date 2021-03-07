@@ -1,6 +1,8 @@
+// **** Includes **** //
 #include "colors.inc"
 #include "textures.inc"
 
+// **** Figuras **** //
 #declare portavelas = 
   union {
     // Agujero del centro para meter la vela
@@ -106,6 +108,7 @@
       0.4, 2.4, 5,
       <2,0>, <2.13,-0.33>, <2.35,0>, <2.13,0.33>, <2,0>
     }
+
     texture {
       pigment {
         color Grey
