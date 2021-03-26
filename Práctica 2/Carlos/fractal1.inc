@@ -1,0 +1,75 @@
+/* MENGER SPONGE */
+#macro voidCubes(dim) 
+    #declare y1 = (1/3) / (pow(3, dim));
+    #declare z1 = (1/3) / (pow(3, dim));
+    
+    #declare prod1 = -0.1;
+    #declare prod2 = 1.1;
+    
+    #declare psize = (1/3) / (pow(3, dim));
+                    
+    #while (z1 <= 1)
+        #declare y1 = (1/3) / (pow(3, dim));
+        #while (y1 <= 1)
+            box {
+                <prod1, y1, z1>,
+                <prod2, y1 + psize, z1 + psize>
+
+                pigment {
+                    color rgb <1, 0.2, 0>
+                }
+            }
+
+            box {
+                <y1, z1, prod1>,
+                <y1 + psize, z1 + psize, prod2>
+                pigment {
+                    color rgb <1, 0.2, 0>
+                }
+            } 
+
+            box {
+                <y1, prod1, z1>,
+                <y1 + psize, prod2, z1 + psize>
+                pigment {
+                    color rgb <1, 0.2, 0>
+                }
+            }                                                
+                                             
+            #declare y1 = y1 + pow((1/3), dim);
+        #end
+        
+        #declare z1 = z1 + pow((1/3), dim);
+
+    #end             
+#end   
+
+
+#declare menger_sponge = 
+    difference {
+        box { 
+            <0, 0, 0>,
+            <1, 1, 1> 
+        }
+
+        voidCubes(0)
+        voidCubes(1)
+        voidCubes(2)
+        voidCubes(3)
+        voidCubes(4)
+
+        pigment {
+            color rgb <1, 0.2, 0> 
+        }
+    
+        finish {
+            ambient 0.5
+            diffuse 0.1
+            specular 1
+            roughness 0.001
+            reflection {
+                0.75
+                metallic
+            }
+        }             
+    }
