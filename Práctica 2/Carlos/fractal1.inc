@@ -16,7 +16,7 @@
                 <prod2, y1 + psize, z1 + psize>
 
                 pigment {
-                    color rgb <1, 0.2, 0>
+                    Coral
                 }
             }
 
@@ -24,7 +24,7 @@
                 <y1, z1, prod1>,
                 <y1 + psize, z1 + psize, prod2>
                 pigment {
-                    color rgb <1, 0.2, 0>
+                    Coral
                 }
             } 
 
@@ -32,7 +32,7 @@
                 <y1, prod1, z1>,
                 <y1 + psize, prod2, z1 + psize>
                 pigment {
-                    color rgb <1, 0.2, 0>
+                    Coral
                 }
             }                                                
                                              
@@ -59,14 +59,14 @@
         voidCubes(4)
 
         pigment {
-            color rgb <1, 0.2, 0> 
+            Coral
         }
     
         finish {
-            ambient 0.5
-            diffuse 0.1
+            ambient 0.75
+            diffuse 0.15
             specular 1
-            roughness 0.001
+            roughness 5
             reflection {
                 0.75
                 metallic
