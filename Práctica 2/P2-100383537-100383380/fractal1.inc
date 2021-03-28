@@ -1,4 +1,3 @@
-/* MENGER SPONGE */
 #macro voidCubes(dim) 
     #declare y1 = (1/3) / (pow(3, dim));
     #declare z1 = (1/3) / (pow(3, dim));
@@ -44,7 +43,7 @@
     #end             
 #end   
 
-
+/* Esponja de Menger */
 #declare menger_sponge = 
     difference {
         box { 

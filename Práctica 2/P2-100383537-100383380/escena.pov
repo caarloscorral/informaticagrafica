@@ -1,10 +1,4 @@
-/******** INCLUDES ********/
-#include "colors.inc"
-#include "golds.inc"
-#include "woods.inc"
-#include "textures.inc"
-#include "metals.inc"
-#include "functions.inc"
+/******** Includes ********/
 #include "bench.inc"
 #include "room.inc"
 #include "stands.inc"
@@ -13,40 +7,35 @@
 #include "fractal2.inc"
 #include "fractal3.inc"
 
-/******** SCENE ********/
-global_settings {
-  assumed_gamma 1
-}
-
-// Camera
+// Camara
 camera {
-  location <13, 0, 0>
+  location <10, 0, 0>
   look_at <0, 0, 0>
 }
 
-// Main light
+// Luz principal
 light_source {
   <0, 0, 10>, 0.15
   media_interaction off
 }
 
-/******** OBJECTS ********/
-// Room
+/******** Objetos ********/
+// Habitacion
 object {
   room
 }
 
-// Stands
+// Soportes
 object {
   stands
 }
 
-// Don't pass section
+// Separacion (postes y cuerda)
 object {
   dontpass
 }
 
-// Bench
+// Banco
 object {
   Bench
 
@@ -55,23 +44,24 @@ object {
   translate <-2, -6, 0>
 }
 
-// Menger Sponge fractal
+// Esponja de Menger
 object {
   menger_sponge
-
+  
   scale 1.25
   translate <-7.5, -2, -5.6>
 }
 
-Tree fractal
+// Arbol fractal
 object {
   arbol
-
-  scale 1.25
+    
+  scale 2
+  rotate y*90
   translate <-7, -2, 0>
 }
 
-// Julia fractal
+// Fractal de Julia
 object {
   fractal_julia
 

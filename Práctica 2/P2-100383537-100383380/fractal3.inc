@@ -1,7 +1,7 @@
 #include "colors.inc"
 #include "metals.inc"
 
-/* JULIA FRACTAL */
+/* Fractal de Julia */
 #declare fractal_julia = 
     julia_fractal {
         <-0.89466546, 0.0, 0.25, 0.0>
